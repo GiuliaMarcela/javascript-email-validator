@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-mail Validator</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Chivo:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="content-wrapper">
+        <header>
+          <h1 class="title">E-mail Validator</h1>
+          <span class="subtitle"
+            >An simple e-mail validator that uses Javascript! =)</span
+          >
+        </header>
+
+        <form id="emailForm" novalidate>
+          <div class="form-control">
+            <label for="email">E-mail</label>
+            <div class="form-input">
+              <i
+                class="ph-bold ph-envelope-simple"
+                id="email--icon"
+                aria-hidden="true"
+              ></i>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="input"
+                required
+                aria-describedby="emailHint"
+              />
+            </div>
+          </div>
+          <div class="messages" role="alert">
+            <p class="message warning" hidden>
+              <i class="ph ph-warning-circle" aria-hidden="true"></i>
+              O campo e-mail é obrigatório.
+            </p>
+            <p class="message success" hidden>
+              <i class="ph-bold ph-check-circle" aria-hidden="true"></i>
+              O e-mail informado é válido.
+            </p>
+            <p class="message error" hidden>
+              <i class="ph-bold ph-x-circle" aria-hidden="true"></i>
+              E-mail inválido. Insira um endereço de e-mail válido, como
+              "exemplo@dominio.com".
+            </p>
+          </div>
+          <button type="submit" class="btn" aria-label="Validar e-mail">
+            Check
+          </button>
+          <button type="button" class="btn outline">Clear Field</button>
+        </form>
+      </div>
+      <script src="src/index.js"></script>
+    </main>
+  </body>
+</html>
