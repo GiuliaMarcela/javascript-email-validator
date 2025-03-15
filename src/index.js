@@ -56,9 +56,7 @@ function hideAllMessages() {
 }
 
 function showMessage(messageElement, isSuccess) {
-  successMessage.hidden = true;
-  errorMessage.hidden = true;
-  warningMessage.hidden = true;
+  hideAllMessages();
 
   messageElement.hidden = false;
 
